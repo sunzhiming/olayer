@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:background="#7e0f64"
+              android:layout_height="match_parent">
+
+   <!-- <VideoView
+       android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/videoview"/>-->
+    <io.vov.vitamio.widget.VideoView
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/videoview"/>
+
+    <include layout="@layout/video_top"/>
+
+    <FrameLayout
+        android:id="@+id/fl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        >
+    <include layout="@layout/video_bottom"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fl_overlay"
+        android:background="#000"
+        android:alpha="0"/>
+
+</RelativeLayout>
